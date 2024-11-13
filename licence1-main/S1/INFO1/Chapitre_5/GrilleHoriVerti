@@ -1,0 +1,34 @@
+from bibimages import *
+
+monImage = nouvelleImage(300, 300)
+c = (255,100,0)
+d = 3
+v = 9
+
+def ligneHorizontale(img, c, y):
+    l = largeurImage(img)
+    h = hauteurImage(img)
+    for x in range(l):
+        colorierPixel(img, x, y, c)
+        
+def grilleHorizontale(img, c, d):
+    l = largeurImage(img)
+    h = hauteurImage(img)
+    for yo in range(0,h,d):
+        ligneHorizontale(img, c, yo)
+
+def ligneVertical(img, c, x):
+    l = largeurImage(img)
+    h = hauteurImage(img)
+    for y in range(h):
+        colorierPixel(img, x, y, c)
+        
+def grilleVertical(img, c, v):
+    l = largeurImage(img)
+    h = hauteurImage(img)
+    for xo in range(0,l,v):
+        ligneVertical(img, c, xo)
+
+grilleHorizontale(monImage, c, d)
+grilleVertical(monImage, c, v)
+afficherImage(monImage)

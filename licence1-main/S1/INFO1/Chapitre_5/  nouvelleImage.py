@@ -1,7 +1,7 @@
 from bibimages import *
 
 
-monImage = nouvelleImage (300,200)
+monImage = (300,200)
 colorierPixel(monImage, 100,100, (0,355,355))
 afficherImage(monImage)
 

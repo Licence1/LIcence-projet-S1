@@ -1,0 +1,16 @@
+
+fond= ouvrirImage("road.jpg")
+avantPlan= ouvrirImage("personnage.png")
+dx=340
+dy=50
+
+def copieImage(avantPlan, fond, dx, dy):
+    L= largeurImage(avantPlan)
+    H=hauteurImage(avantPlan)
+    for x in range(L):
+        for y in range(H):
+            (r,g,b)=couleurPixel(avantPlan, x, y)
+            colorierPixel(fond,x+dx,y+dy,(r,g,b))
+                              
+copieImage(avantPlan, fond,dx, dy)
+afficherImage(fond)

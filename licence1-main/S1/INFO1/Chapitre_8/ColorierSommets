@@ -1,1 +1,21 @@
+ Stocker le sommet nommé Paris du graphe tgv dans une variable p.
+2. Appeler la fonction colorierSommet en lui passant en paramètre la variable p et la cou-
+leur "green" (vert). Appeler la fonction afficherGraphe sur le graphe. Constater la
+coloration.
+3. Colorier le sommet Bordeaux du graphe tgv en bleu, en une seule ligne, en combinant les
+appels de fonctions plutôt que passer par une variable. Relancer afficherGraphe pour
+constater la coloration.
+
+graph=ouvrirGraphe("tgv2005.dot")
+
+
+P=sommetNom(graph,"Paris")
+V=sommetNom(graph, "Bordeaux")
+colorierSommet(P, "green")
+colorierSommet(V, "blue")
+
+        
+        
+
+afficherGraphe(graph)
 
